@@ -5,6 +5,10 @@ const app = express();
 const port = process.env.PORT || 9090;
 const db_url = process.env.DB_URL;
 
+
+app.use(express.json())
+app.use(cors())
+
 app.get("/", (req,res) => {
   res.send("this is a home route");
 });
